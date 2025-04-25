@@ -9,20 +9,31 @@ type Language = 'ja' | 'zh-TW' | 'en';
 interface Translation {
   title: string;
   saveImage: string;
+  saveOriginal: string;
   copyLink: string;
   watched: string;
   notWatched: string;
   linkCopied: string;
+  description: {
+    message: string;
+    source: string;
+  };
   stats: {
     watched: string;
     notWatched: string;
   };
 }
 
+type NestedKeyOf<T> = {
+  [K in keyof T]: T[K] extends object
+    ? `${K & string}.${keyof T[K] & string}`
+    : K
+}[keyof T];
+
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: keyof Translation) => string;
+  t: (key: NestedKeyOf<Translation>) => string;
   stats: Translation['stats'];
   translateAnime: (title: string) => string;
 }
@@ -62,8 +73,13 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     localStorage.setItem('language', language);
   }, [language]);
 
-  const t = (key: keyof Translation): string => {
-    return translations[language][key] as string;
+  const t = (key: NestedKeyOf<Translation>): string => {
+    const keys = key.split('.');
+    let value: any = translations[language];
+    for (const k of keys) {
+      value = value[k];
+    }
+    return value as string;
   };
 
   const translateAnime = (title: string): string => {

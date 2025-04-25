@@ -6,11 +6,36 @@
   position: relative;
 }
 
+.description {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  padding: 15px 20px;
+  background-color: #333;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.description p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.sourceLink {
+  color: #2196f3;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.sourceLink:hover {
+  text-decoration: underline;
+}
+
 .bingoContainer {
   width: 100%;
   background-color: #333;
   overflow: hidden;
- 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .titleBar {
@@ -35,53 +60,34 @@
   gap: 8px;
   z-index: 1000;
   align-items: flex-end;
-  background-color: rgba(36, 36, 36, 0.9); /* Semi-transparent background */
+  background-color: rgba(36, 36, 36, 0.9);
   padding: 10px;
-  border-radius: 8px;
-  backdrop-filter: blur(4px); /* Blur effect for modern browsers */
+  backdrop-filter: blur(4px);
 }
 
 .buttonGroup {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  width: 90px;
+  width: 120px;
 }
 
-.exportButton {
+.exportButton, .shareButton, .exportOriginalButton {
   display: block;
   padding: 6px 12px;
+  color: white;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
   background-color: #f44336;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 13px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  width: 100%;
-  text-align: center;
 }
 
-.exportButton:hover {
+.exportButton:hover, .shareButton:hover, .exportOriginalButton:hover {
   background-color: #d32f2f;
-}
-
-.shareButton {
-  display: block;
-  padding: 6px 12px;
-  background-color: #2196f3;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 13px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  width: 100%;
-  text-align: center;
-}
-
-.shareButton:hover {
-  background-color: #1976d2;
 }
 
 .grid {

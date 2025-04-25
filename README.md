@@ -1,6 +1,6 @@
 # アニメ世代別ビンゴ (Anime Generation Bingo)
 
-I recently saw this anime bingo concept online and thought it would be fun to create a web version. This makes it easier to track and share which anime you've watched from different years.
+I recently saw this anime bingo concept online and thought it would be fun to create a web version.
 
 ## Features
 

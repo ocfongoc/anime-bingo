@@ -6,16 +6,14 @@ export const LanguageSelector = () => {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div className={styles.languageSelector}>
-      <select
-        className={styles.languageSelect}
-        value={language}
-        onChange={(e) => setLanguage(e.target.value as 'ja' | 'zh-TW' | 'en')}
-      >
-        <option value="en">English</option>
-        <option value="ja">日本語</option>
-        <option value="zh-TW">繁體中文</option>
-      </select>
-    </div>
+    <select
+      value={language}
+      onChange={(e) => setLanguage(e.target.value as 'ja' | 'zh-TW' | 'en')}
+      className={styles.select}
+    >
+      <option value="ja">日本語</option>
+      <option value="zh-TW">繁體中文</option>
+      <option value="en">English</option>
+    </select>
   );
 }; 
