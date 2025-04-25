@@ -2,7 +2,7 @@ export const zhTW = {
   title: '動畫世代Bingo',
   saveImage: '儲存圖片',
   saveOriginal: '儲存原圖',
-  copyLink: '複製連結',
+  copyLink: '分享連結',
   watched: '已看過',
   notWatched: '未看過',
   linkCopied: '已複製連結！',

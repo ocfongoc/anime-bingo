@@ -2,7 +2,7 @@ export const ja = {
   title: 'アニメ世代別ビンゴ',
   saveImage: '画像を保存',
   saveOriginal: '原画を保存',
-  copyLink: 'リンクをコピー',
+  copyLink: 'リンクで共有',
   watched: '見た',
   notWatched: '見てない',
   linkCopied: 'リンクをコピーしました！',

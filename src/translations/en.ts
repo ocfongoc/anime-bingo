@@ -2,7 +2,7 @@ export const en = {
   title: 'Anime Generation Bingo',
   saveImage: 'Save Image',
   saveOriginal: 'Save Original',
-  copyLink: 'Copy Link',
+  copyLink: 'Share by Link',
   watched: 'Watched',
   notWatched: 'Not Watched',
   linkCopied: 'Link copied to clipboard!',
