@@ -7,7 +7,7 @@ export const ja = {
   notWatched: '見てない',
   linkCopied: 'リンクをコピーしました！',
   description: {
-    message: 'オンラインで見かけたアニメビンゴのコンセプトが面白そうだったので、ウェブ版を作ってみました。',
+    message: 'ネットで見かけたアニメビンゴのコンセプトが面白そうだったので、ウェブ版を作ってみました。',
     source: '出典'
   },
   stats: {

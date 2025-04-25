@@ -7,7 +7,7 @@ export const zhTW = {
   notWatched: '未看過',
   linkCopied: '已複製連結！',
   description: {
-    message: '我最近在網路上看到這個動畫Bingo的概念很有趣，所以決定製作一個網頁版。',
+    message: '我最近在網路上看到這個動畫Bingo的概念很有趣，所以試著製作了一個網頁版。',
     source: '來源'
   },
   stats: {

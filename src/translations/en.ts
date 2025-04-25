@@ -1,5 +1,5 @@
 export const en = {
-  title: 'Anime Generation Bingo',
+  title: 'Anime Bingo by Generation',
   saveImage: 'Save Image',
   saveOriginal: 'Save Original',
   copyLink: 'Share by Link',
