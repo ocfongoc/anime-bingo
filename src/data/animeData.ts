@@ -1,4 +1,4 @@
-import { AnimeData } from '../types/anime';
+import { AnimeData, AnimeEntry } from '../types/anime';
 
 export const animeData: AnimeData = {
   2006: [
@@ -242,4 +242,28 @@ export const getInitialStats = () => {
     watched: 0,
     notWatched: total
   };
-}; 
+};
+
+// Helper function to generate short IDs for anime titles
+export const generateAnimeIds = () => {
+  const idMap: { [key: string]: string } = {};
+  let currentId = 0;
+  
+  Object.values(animeData).forEach(yearEntries => {
+    yearEntries.forEach((anime: AnimeEntry) => {
+      if (!idMap[anime.title]) {
+        // Convert number to base36 for shorter representation
+        idMap[anime.title] = currentId.toString(36);
+        currentId++;
+      }
+    });
+  });
+  
+  return idMap;
+};
+
+export const animeIdMap = generateAnimeIds();
+export const reverseAnimeIdMap = Object.entries(animeIdMap).reduce((acc, [title, id]) => {
+  acc[id] = title;
+  return acc;
+}, {} as { [key: string]: string }); 

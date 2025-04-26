@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import html2canvas from "html2canvas";
-import { animeData, getInitialStats } from "../data/animeData";
+import { animeData, getInitialStats, animeIdMap, reverseAnimeIdMap } from "../data/animeData";
 import { AnimeEntry, AnimeStats } from "../types/anime";
 import { LanguageSelector } from "./LanguageSelector";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -19,7 +19,8 @@ export const AnimeBingo = () => {
     const watchedParam = params.get("watched");
     if (watchedParam) {
       const decoded = decodeURIComponent(watchedParam);
-      const watchedTitles = decoded.split(",");
+      const watchedIds = decoded.split(",");
+      const watchedTitles = watchedIds.map(id => reverseAnimeIdMap[id]);
       const newWatched = new Set(watchedTitles);
       setWatchedAnime(newWatched);
 
@@ -127,8 +128,8 @@ export const AnimeBingo = () => {
   };
 
   const shareState = () => {
-    const watchedTitles = Array.from(watchedAnime);
-    const encoded = encodeURIComponent(watchedTitles.join(","));
+    const watchedIds = Array.from(watchedAnime).map(title => animeIdMap[title]);
+    const encoded = encodeURIComponent(watchedIds.join(","));
     const url = new URL(window.location.href);
     url.searchParams.set("watched", encoded);
     navigator.clipboard.writeText(url.toString());
