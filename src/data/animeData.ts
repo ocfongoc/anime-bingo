@@ -154,7 +154,7 @@ export const animeData: AnimeData = {
     { title: 'からかい上手の高木さん', year: 2018, isWatched: false },
     { title: '色づく世界の明日から', year: 2018, isWatched: false },
     { title: '寄宿学校のジュリエット', year: 2018, isWatched: false },
-    { title: 'SSSS.GRIDMAN', year: 2018, isWatched: false },
+    { title: 'SSSS.\nGRIDMAN', year: 2018, isWatched: false },
     { title: 'はたらく細胞', year: 2018, isWatched: false },
   ],
   2019: [
@@ -191,7 +191,7 @@ export const animeData: AnimeData = {
     { title: '探偵はもう、死んでいる。', year: 2021, isWatched: false },
     { title: 'ヴァニタスの手記', year: 2021, isWatched: false },
     { title: '王様ランキング', year: 2021, isWatched: false },
-    { title: 'SSSS.DYNAZENON', year: 2021, isWatched: false },
+    { title: 'SSSS.\nDYNAZENON', year: 2021, isWatched: false },
   ],
   2022: [
     { title: 'ぼっち・ざ・ろっく!', year: 2022, isWatched: false },
