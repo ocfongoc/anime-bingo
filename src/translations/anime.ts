@@ -467,7 +467,7 @@ export const animeTranslations: AnimeTranslationMap = {
     '探偵はもう、死んでいる。': 'The Detective Is Already Dead',
     'ヴァニタスの手記': 'The Case Study of Vanitas',
     '王様ランキング': 'Ranking of Kings',
-    'SSSS.DYNAZENON': 'SSSS.DYNAZENON',
+    'SSSS.DYNAZENON': 'SSSS.\nDYNAZENON',
     'ぼっち・ざ・ろっく!': 'Bocchi the Rock!',
     'リコリス・リコイル': 'Lycoris Recoil',
     'チェンソーマン': 'Chainsaw Man',
