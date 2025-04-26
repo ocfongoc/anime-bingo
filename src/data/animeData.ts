@@ -207,8 +207,8 @@ export const animeData: AnimeData = {
   ],
   2023: [
     { title: '【推しの子】', year: 2023, isWatched: false },
-    { title: '群青のプリズレン', year: 2023, isWatched: false },
     { title: '葬送のフリーレン', year: 2023, isWatched: false },
+    { title: '薬屋のひとりごと', year: 2023, isWatched: false },
     { title: 'お兄ちゃんはおしまい!', year: 2023, isWatched: false },
     { title: '私の幸せな結婚', year: 2023, isWatched: false },
     { title: '僕の心のヤバイやつ', year: 2023, isWatched: false },
